@@ -25,6 +25,7 @@ Create environment:
 ```bash
 conda env create -f environment.yaml
 conda activate honyak
+```
 
 ---
 
