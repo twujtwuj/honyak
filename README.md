@@ -1,14 +1,67 @@
 
-# Honyak
+# Honyak 📝
 
 Toki!
 
-This project fine-tunes a small sequence-to-sequence language model (T5-small)
-to translate English sentences into Toki Pona, a constructed language with a
-minimal vocabulary. The model is trained using the Hugging Face Transformers
-framework, with an emphasis on reproducibility and clean software engineering
-practices.
+This project fine-tunes a small sequence-to-sequence model (T5-small) to translate English (EN) sentences into Toki Pona (TP), a constructed language with a ~120-word vocabulary. The model is trained using the Hugging Face Transformers framework (https://huggingface.co/docs/transformers/en/index
+).
 
+
+## Fine-tuning T5-small to learn a new language 🤖🌐
+
+### Background
+
+Toki Pona (TP) is a constructed language created by Sonja Lang in 2001. With a minimal vocabulary of ~120 official words and only 14 phonemes, it is intentionally simple. Despite this, an active TP-speaking community online has produced thousands of sentences in the language's Latin script.
+
+
+### Data set and base model
+ 
+The Tatoeba project (tatoeba.org) provides ~28k English–Toki Pona sentence pairs. This project fine-tunes T5-small (60M parameters) on this dataset for EN → TP translation. The small size of T5-small allows training locally, avoiding external compute resources. The goal was to assess whether a small-scale transformer could learn a minimalistic language.
+
+Seq2Seq models like T5 are trained in the following way: {.......}
+
+### EN -> TP only
+
+The focus is solely on EN → TP translation. TP is highly context-dependent and ambiguous: one word can have multiple meanings, resulting in a many-to-one mapping from EN to TP sentences. Translating TP → EN is therefore more subjective and requires larger models and more sophisticated training techniques.
+
+### Training process
+
+The training process followed Hugging Face documentation, with guidance from ChatGPT. Hyperparameters such as batch size and gradient accumulation were tuned experimentally.
+
+- Training on 1% of the dataset for 3 epochs produced translations in German (and occasionally French), likely because the model recognized the task as translation but could not identify TP. T5 models are pre-trained on the C4 corpus, which is dominated by English (4T tokens), followed by Russian (T), Spanish (0.6T), and German (0.5T).
+
+- Training on 10% of the dataset for 10 epochs yielded TP-only words, but they were often unrelated to the source sentence.
+
+- Training on 100% of the dataset for 3 epochs produced reasonable translations with frequent grammatical errors.
+
+- Training on 100% of the dataset for 10 epochs achieved high-quality translations. This is the current extent of training.
+
+### Future areas for improvement
+
+
+#### A: Tokiponisation
+
+Tokiponisation converts non-TP names into TP equivalents. This process is largely algorithmic but may diverge from speaker conventions (https://jan-ne.github.io/tp/tpize
+). The model has only learned Tokiponisation for names present in the dataset (e.g., Tom → jan Ton). For new names, it can approximate TP-like forms (demo.ipynb). Incorporating a dataset of Tokiponified names would improve performance.
+
+#### B: Longer sentences
+
+The model struggles with multi-part or long sentences. {.......}
+
+#### C: Capitalisation and punctuation
+
+The model has not learned TP capitalization and punctuation (. ? :), which are grammatically relevant. This is due to initial normalization of TP sentences, which removed these features.
+
+
+### Conclusion
+
+It is possible to fine-tune a small model to translate short EN sentences to TP within a few days, using local compute. The model often produces translations that are qualitatively better than those in the Tatoeba dataset.
+
+Limitations include occasional grammatical errors, particularly for underrepresented structures, and limited utility due to TP's small user base.
+
+---
+
+# Repo structure 📁
 
 ## Folder structure
 
@@ -26,9 +79,3 @@ Create environment:
 conda env create -f environment.yaml
 conda activate honyak
 ```
-
----
-
-# Fine-tuning T5-small to learn a new language
-
-{write up}
