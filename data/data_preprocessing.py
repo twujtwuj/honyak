@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-# Load raw sentences
+# Load raw sentences (taken from tatoeba.org)
 df = pd.read_csv("raw_sentence_pairs_2024_02_20.tsv", sep="\t", header=None)
 
 # Remove numerical tags and keep just sentences
