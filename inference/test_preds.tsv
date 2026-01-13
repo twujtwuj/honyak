@@ -1,0 +1,31 @@
+english	toki_pona	predicted_tp	cross_entropy_loss
+Tell me what I need to do.	o toki e ni tawa mi: mi wile pali e seme?	o toki e ni tawa mi mi wile pali	1.1284219026565552
+Translating this sentence will be very easy.	sitelen ni li pona tawa toki ante.	jan li toki e linja nimi ni li pona mute	1.2961859703063965
+We thought he was an American.	mi toki e ni: ona li jan Mewika.	mi pilin e ni ona li jan pi ma mewika	2.1967403888702393
+Don’t you try and blame this on him.	o toki ala e ni: ike ni li tan ona.	o lukin ala e ni tawa ona sina toki e ni tawa on	1.3552426099777222
+Ken is as tall as Bill.	jan Ken en jan Pilu li suli sama.	jan ken li suli sama jan billi	2.0495355129241943
+Why were you still in bed? Were you sick?	tan seme la sina awen lon supa lape? sina ike sijelo anu seme?	sina awen lon lape tan seme sina jo e sijelo ike	1.196203589439392
+Don't apologize for being curious.	sina wile sona la sina ike ala.	o toki ala e ni sina sona e ni	1.7002413272857666
+We want peace.	mi mute li wile ala utala.	mi mute li wile e utala	0.926057755947113
+Tallinn is the capital of Estonia.	ma tomo Talin li ma tomo lawa pi ma Esi.	ma tomo tinni li ma tomo lawa pi ma esun	1.8961702585220337
+I love dogs.	soweli li pona mute tawa mi.	soweli tomo li pona tawa mi	0.6517115235328674
+I came because I wanted to.	mi kama tan ni: mi wile.	mi kama tan wile mi	1.5540850162506104
+Our seagulls are white.	waso mi pi sewi telo li walo.	soweli tomo pi mi mute li walo	1.461388349533081
+Everything Bush says is true.	toki ali pi jan Pusi li lon.	ali pi toki jan sewi li lon	1.7913717031478882
+I can't understand what you're saying.	mi ken ala sona e toki sina.	mi ken ala sona e toki sina	0.5793994069099426
+What did you need?	sina wile e seme?	sina wile e seme	1.6473948955535889
+I'm aware of the possibility.	mi pilin e ni: ona ken kama.	mi sona e ni	2.852708578109741
+He has access to the American Embassy.	ona li ken tawa insa e tomo pi ma Mewika.	ona li ken jo e tomo pi ma mewika	1.5436155796051025
+The lady doth protest too much, methinks.	pilin mi la, meli ni li toki ike pi mute nasa.	mi pilin e ni meli li toki e ijo pi mute ike	1.3285096883773804
+This country needs him.	ma ni li wile e ona.	ma ni li wile e ona	0.4701380431652069
+He is not the same as before.	ona li sama ala tenpo pini.	ona li sama ala lon tenpo pini	0.7123842835426331
+I can take this to her.	mi ken pana e ni tawa ona.	mi ken pana e ni tawa ona	0.45970168709754944
+The pain is getting worse.	pilin pakala li kama ike pi mute sin.	pakala li kama suli	1.4757325649261475
+My father is here.	mama mi li lon ni.	mama mije mi li lon ni	0.5930282473564148
+The bridge is on the right.	nasin pi noka suli li lon poka lawa.	nasin pi noka suli li lon lawa	0.4920739233493805
+He never speaks of the accident.	tenpo ala la mije ni li toki e pakala.	tenpo ala la ona li toki e ni pi pakala	0.7285824418067932
+Please read the instructions.	o lukin e sitelen pi nasin lawa.	o lukin e lipu toki	0.8125087022781372
+Do I need to change my diet?	mi wile ante e nasin moku mi anu seme?	mi wile ala wile ante e moku mi	1.2181507349014282
+Stop screaming.	o pini e kalama wawa.	o pini e kalama musi	0.7633010149002075
+I am inflating my balloon.	mi pana e kon lon insa pi sike kon mi.	mi pana e ilo jaki mi	1.9735642671585083
+There used to be a bridge here.	tenpo pini la nasin pi noka suli li lon ni.	tenpo pini la nasin suli li lon ni	0.34523507952690125

@@ -1,0 +1,18 @@
+# conda env create -f environment.yml
+# conda activate honyak
+
+name: honyak
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.12
+  - pytorch  # for AutoModelForSeq2SeqLM
+  - pandas
+  - scikit-learn  # for train_test_split
+  - pip
+  - pip:
+      - transformers  # Hugging Face library
+      - sentencepiece  # T5 tokenisers
+      - datasets
+      - evaluate
