@@ -1,5 +1,8 @@
-# conda env create -f environment.yml
-# conda activate honyak
+# Conda environment yaml
+# 
+# Use this to create a conda environment with the required packages:
+# >>> conda env create -f environment.yml
+# >>> conda activate honyak
 
 name: honyak
 channels:

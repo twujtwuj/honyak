@@ -6,6 +6,8 @@ Toki!
 This project fine-tunes a small sequence-to-sequence model (T5-small) to translate English (EN) sentences into Toki Pona (TP), a constructed language with a ~120-word vocabulary. The model is trained using the Hugging Face Transformers framework (https://huggingface.co/docs/transformers/en/index
 ).
 
+I also experiemented with using TensorBoard.
+
 
 ## Fine-tuning T5-small to learn a new language 🤖🌐
 
@@ -16,13 +18,18 @@ Toki Pona (TP) is a constructed language created by Sonja Lang in 2001. With a m
 
 ### Data set and base model
  
-The Tatoeba project (tatoeba.org) provides ~28k English–Toki Pona sentence pairs. This project fine-tunes T5-small (60M parameters) on this dataset for EN → TP translation. The small size of T5-small allows training locally, avoiding external compute resources. The goal was to assess whether a small-scale transformer could learn a minimalistic language.
+The Tatoeba project (tatoeba.org) provides ~28k English–Toki Pona sentence pairs. This project fine-tunes T5-small (60M parameters) on this dataset for EN → TP translation. The small size of T5-small allows training locally, avoiding the need to outsource compute. The goal was to assess whether a small-scale transformer could learn a minimalistic language.
 
 Seq2Seq models like T5 are trained in the following way: {.......}
 
 ### EN -> TP only
 
 The focus is solely on EN → TP translation. TP is highly context-dependent and ambiguous: one word can have multiple meanings, resulting in a many-to-one mapping from EN to TP sentences. Translating TP → EN is therefore more subjective and requires larger models and more sophisticated training techniques.
+
+
+### Tokens and context length
+
+One thing to notice is that the tokens in the tokeniser, whose vocabulary is predetermined and does not change during training, will not contain TP words. Because of this, TP translations are formed of small, character-ish tokens that tend to contain between 2 to 3 times as many tokens as their corrsponding EN. I kept the maximum 'output' length at 32 (the same as the input) though, because if it is higher it makes training so much longer (and my computer runs out of memory).
 
 ### Training process
 
