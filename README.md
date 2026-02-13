@@ -8,6 +8,8 @@ This project fine-tunes a small sequence-to-sequence model (T5-small) to transla
 
 I also experiemented with using TensorBoard.
 
+NEW TRACK: Try fine tuning (already done) and building from scratch, and compare!
+
 
 ## Fine-tuning T5-small to learn a new language 🤖🌐
 
@@ -19,6 +21,8 @@ Toki Pona (TP) is a constructed language created by Sonja Lang in 2001. With a m
 ### Data set and base model
  
 The Tatoeba project (tatoeba.org) provides ~28k English–Toki Pona sentence pairs. This project fine-tunes T5-small (60M parameters) on this dataset for EN → TP translation. The small size of T5-small allows training locally, avoiding the need to outsource compute. The goal was to assess whether a small-scale transformer could learn a minimalistic language.
+
+The tokeniser used it T5TokenizerFast (from AutoTokenizer).
 
 Seq2Seq models like T5 are trained in the following way: {.......}
 
@@ -73,9 +77,10 @@ Limitations include occasional grammatical errors, particularly for underreprese
 ## Folder structure
 
 - `data/`: preprocessing scripts & sample datasets  
-- `training/`: Jupyter notebook for training the model  
+- `demos/`: contains example workflows
 - `inference/`: scripts for generating translations and evaluation  
-- `demo.ipynb`: example workflow
+- `srs/`: Python package
+- `training/`: Jupyter notebook for training the model  
 
 
 ## Setup
