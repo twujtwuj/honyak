@@ -24,7 +24,7 @@ The Tatoeba project (tatoeba.org) provides ~28k English–Toki Pona sentence pai
 
 The tokeniser used it T5TokenizerFast (from AutoTokenizer).
 
-Seq2Seq models like T5 are trained in the following way: {.......}
+[Seq2Seq models like T5 are trained in the following way: {.......}]: #
 
 ### EN -> TP only
 
@@ -53,15 +53,19 @@ The training process followed Hugging Face documentation, with guidance from Cha
 #### A: Tokiponisation
 
 Tokiponisation converts non-TP names into TP equivalents. This process is largely algorithmic but may diverge from speaker conventions (https://jan-ne.github.io/tp/tpize
-). The model has only learned Tokiponisation for names present in the dataset (e.g., Tom → jan Ton). For new names, it can approximate TP-like forms (demo.ipynb). Incorporating a dataset of Tokiponified names would improve performance.
+). The model has only learned Tokiponisation for names present in the dataset (e.g., Tom → jan Ton). For new names, it can approximate TP-like approximations (demo.ipynb). Incorporating a dataset of Tokiponified names or at least augmenting current datasets would improve performance.
 
 #### B: Longer sentences
 
-The model struggles with multi-part or long sentences. {.......}
+The model struggles with multi-part or long sentences. [{.......}]: #
 
 #### C: Capitalisation and punctuation
 
 The model has not learned TP capitalization and punctuation (. ? :), which are grammatically relevant. This is due to initial normalization of TP sentences, which removed these features.
+
+#### D: New, more restrictive architecture?
+
+I am currently experimenting with the idea of using a more customised architecture that takes in English tokens (~13k for the T5-series' tokeniser) and outputs  
 
 
 ### Conclusion
