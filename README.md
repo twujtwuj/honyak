@@ -6,9 +6,7 @@ Toki!
 This project fine-tunes a small sequence-to-sequence model (T5-small) to translate English (EN) sentences into Toki Pona (TP), a constructed language with a ~120-word vocabulary. The model is trained using the Hugging Face Transformers framework (https://huggingface.co/docs/transformers/en/index
 ).
 
-I also experiemented with using TensorBoard.
-
-NEW TRACK: Try fine tuning (already done) and building from scratch, and compare!
+I also experiemented with other lirbaries to help me to build and train the model (for example TensorBoard to visualise traning) and want to expand this project to eventually have a front end so that it users can interact with the model via a UI.
 
 
 ## Fine-tuning T5-small to learn a new language 🤖🌐
@@ -20,11 +18,9 @@ Toki Pona (TP) is a constructed language created by Sonja Lang in 2001. With a m
 
 ### Data set and base model
  
-The Tatoeba project (tatoeba.org) provides ~28k English–Toki Pona sentence pairs. This project fine-tunes T5-small (60M parameters) on this dataset for EN → TP translation. The small size of T5-small allows training locally, avoiding the need to outsource compute. The goal was to assess whether a small-scale transformer could learn a minimalistic language.
+The Tatoeba project (tatoeba.org) provides ~28k English–Toki Pona sentence pairs. This project fine-tunes T5-small (60M parameters) on this dataset for EN → TP translation. The small size of T5-small allows training locally, avoiding the need to outsource compute. The goal was to assess whether a small-scale transformer could learn a minimalistic language. The T5 series are Seq2Seq models.
 
 The tokeniser used it T5TokenizerFast (from AutoTokenizer).
-
-[Seq2Seq models like T5 are trained in the following way: {.......}]: #
 
 ### EN -> TP only
 
@@ -57,7 +53,7 @@ Tokiponisation converts non-TP names into TP equivalents. This process is largel
 
 #### B: Longer sentences
 
-The model struggles with multi-part or long sentences. [{.......}]: #
+The model struggles with multi-part or long sentences. I want to think about how I can augment the data set such that longer English sentences have more faithful translations.
 
 #### C: Capitalisation and punctuation
 
@@ -95,3 +91,9 @@ Create environment:
 conda env create -f environment.yaml
 conda activate honyak
 ```
+
+
+# References
+
+[1] SambaLingo: Teaching Large Language Models New Languages (Csaki et. al, 2024)
+[2] Google T5 Models (Hugging Face Transformer Library)
